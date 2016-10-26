@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="tweetMap">
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin-top: 2%;
+        padding: 0;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./CSS/css/bootstrap.css">
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNdlyvg3SJ8_V0pQOhH8fjm1lRkFyA-Eg&callback=initMap"
+    async defer></script>
+    <script src="/JS/angular.min.js"> </script>
+    <script src="/JS/angular-route.min.js"> </script>
+    <script src="/controllers/tweetMapController.js"> </script>
+  </head>
+  <body ng-controller="tweetMapController" onload="initMap()">
+    <div>
+      <label>Search:</label>
+      <select ng-model="search" ng-options="x for x in keywords">
+      </select>
+    </div>
+    <div id="map"></div>
+    <script>
+      
+    </script>
+  </body>
+</html>
